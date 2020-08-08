@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Форма регистрации</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="bootstrap-datepicker/bootstrap-datepicker.standalone.min.css">
+    <script
+    src="https://code.jquery.com/jquery-3.4.1.js"
+    integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+    crossorigin="anonymous">
+    </script>
+    <script src="bootstrap-datepicker/bootstrap-datepicker.min.js"></script>
+    <script src="main.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Форма регистрации</h1><br>
+        <form id="registration">
+            <div class="form-group">
+                <label for="name">Имя</label>
+                <input type="text" id="name" name="name" placeholder="Введите имя" class="form-control" required>
+            </div>
+            <div class="form-group">
+                <label for="name">Фамилия</label>
+                <input type="text" id="surname" name="surname" placeholder="Введите фамилию" class="form-control">
+            </div>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="Введите email" class="form-control">
+            </div>
+            <div class="form-group">
+                <label for="dob">Дата рождения</label><br>
+                <div class="input-group date" data-provide="datepicker">
+                    <input type="text" class="form-control datepicker">
+                    <div class="input-group-addon">
+                        <span class="glyphicon glyphicon-th"></span>
+                    </div>
+                </div>
+                <!--<select name="day" class="form-control">
+                    <option>день</option>
+                    <option>23</option>
+                </select>
+                <select name="month" class="form-control">
+                    <option>месяц</option>
+                    <option>декабря</option>
+                </select>
+                <select name="year" class="form-control">
+                    <option>год</option>
+                    <option>1981</option>
+                </select>-->
+            </div>
+            <div class="form-group">
+                <label for="password">Пароль</label>
+                <input type="password" id="password" name="password" placeholder="Введите пароль" class="form-control">
+            </div>
+            <div class="form-group">
+                <label for="password">Повторите пароль</label>
+                <input type="password" id="confPassword"  name="confPassword" placeholder="Повторите пароль" class="form-control">
+            </div>
+            <button type="button" name="button" class="btn btn-success">+</button><br><br>
+            <input type="submit" id="sendForm" class="btn btn-success" value="Регистрация">
+        </form>
+        <div id="errorMess"></div>
+    </div>
+    
+</body>
+</html>
